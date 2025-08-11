@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "CVS Beep Reminder",
+  "version": "1.0",
+  "description": "20-20-20 eye rest reminder",
+  "permissions": ["alarms", "offscreen", "storage", "notifications"],
+  "host_permissions": [
+    "https://icanhazdadjoke.com/"
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16_gray.png",
+      "48": "icon48_gray.png",
+      "128": "icon128_gray.png"
+    }
+  },
+  "icons": {
+    "16": "icon16_gray.png",
+    "48": "icon48_gray.png",
+    "128": "icon128_gray.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "beep.mp3",
+        "bell.mp3",
+        "gong.mp3",
+        "countdown.html",
+        "countdown.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

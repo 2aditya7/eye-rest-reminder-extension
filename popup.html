@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Eye Rest Reminder</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 14px; width: 300px; background:#f6fbf6; color:#222; }
+    h1 { font-size:16px; margin:0 0 10px; color:#1f8de0; text-align:center; }
+    label { display:block; margin-top:8px; font-size:13px; color:#333; }
+    input, select { width:100%; padding:7px; margin-top:6px; border-radius:6px; border:1px solid #ccc; box-sizing:border-box; }
+    .buttons { display:flex; gap:8px; margin-top:12px; }
+    button { flex:1; padding:8px; border-radius:8px; border:none; cursor:pointer; color:#fff; font-weight:600; }
+    #start { background:#1f8de0; }
+    #stop  { background:#e74c3c; }
+    #status { margin-top:10px; font-size:13px; color:#333; }
+    #next { margin-top:6px; font-size:13px; color:#555; }
+    #jokeBox { margin-top:12px; background: #fff; padding:10px; border-radius:8px; border:1px solid #e6e6e6; }
+    #joke { font-size:13px; line-height:1.3; margin-bottom:8px; }
+    #jokeBtn { width:100%; padding:8px; border-radius:6px; border:0; background:#6c5ce7; color:#fff; cursor:pointer; font-weight:600; }
+  </style>
+</head>
+<body>
+  <h1>👀 Eye Rest</h1>
+
+  <label for="interval">Interval (minutes)</label>
+  <input id="interval" type="number" min="1" value="20" />
+
+  <label for="sound">Sound</label>
+  <select id="sound">
+    <option value="beep.mp3">Beep</option>
+    <option value="bell.mp3">Bell</option>
+    <option value="gong.mp3">Gong</option>
+  </select>
+
+  <div class="buttons">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
+
+  <div id="status">Timer stopped</div>
+  <div id="next">Next in: --:--</div>
+
+  <div id="jokeBox">
+    <div><strong>Last joke</strong></div>
+    <div id="joke">(no joke yet)</div>
+    <button id="jokeBtn">Another joke</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
